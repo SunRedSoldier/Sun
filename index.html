@@ -1,1 +1,165 @@
-hello
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://s1.ax1x.com/2020/06/10/tI4ZdA.png">
+
+    <title>Sun</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1874714_d0kvv3zd2m7.css">
+    <style>
+      .iconfont{
+      font-family:"iconfont" !important;
+      font-size:16px;font-style:normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;}
+    </style>
+
+    <style type="text/css">
+      #box{
+      text-align: center;
+      }
+      .none{
+      display: none;
+      }
+      .active{
+      display: inline-block;
+      }
+    </style>
+
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <!-- <h3 class="masthead-brand">Sun</h3> -->
+              <nav>
+                <ul class="nav masthead-nav">
+                  
+                  <li><a href="javascript:void(0);" id="changeback" style="color:#ed5736;">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            
+            <h1 >Hello</h1>
+            <p class="lead"></p>
+            
+          </div>
+
+          <div class="mastfoot">
+            
+            <div class="inner">
+              <div id="box">
+                <img src="wxqrcode.png" height="120px" width="120px" id="wechatcode" class='none'>
+              </div>
+              <p> 
+                <a href="javascript:void(0);" onclick="QQ()" style="text-decoration:none;"
+                onMouseOver="this.style.color= '#12B7F5'" onMouseOut="this.style.color='#FFFFFF'"><i class="iconfont icon iconqq"></i></a>
+                &nbsp;
+                <a href="javascript:void(0);" onclick="mail()" style="text-decoration:none;"
+                onMouseOver="this.style.color= '#12B7F5'" onMouseOut="this.style.color='#FFFFFF'"><i class="iconfont icon iconmail"></i></a>
+                &nbsp;
+                <a href="javascript:void(0);"  onclick="wechat()" style="text-decoration:none;"
+                onMouseOver="this.style.color= '#12B7F5'" onMouseOut="this.style.color='#FFFFFF'"><i class="iconfont icon iconwechat" id="iconwechat"></i></a>
+
+                
+              </p>
+              
+                 
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script>        
+      var iconwechat = document.getElementById('iconwechat');
+      var wechatcode = document.getElementById('wechatcode');
+      iconwechat.onmouseover = function(){
+        wechatcode.className = 'active';
+      }
+      iconwechat.onmouseout = function(){
+        wechatcode.className = 'none';
+      }
+    </script>
+
+    <script>
+
+        function QQ(){
+          window.open("http://wpa.qq.com/msgrd?v=3&uin=1027389981&site=qq&menu=yes","_blank")
+        }
+        function mail(){
+          window.open("mailto:job@sunhongbing.cn","_self")
+        }
+        
+    // $(document).ready(function(){
+    //     $(".changeback").click(function(){
+    //         $("body").css("backgroundColor","#333");
+    //     })
+    // })
+        var imageNum=1;
+        $("#changeback").click(function(){
+            imageNum++;
+            if(imageNum==4){
+                imageNum=1;
+            }
+            console.log(imageNum);
+            switch(imageNum){
+                case 3:
+                $("body,html").css({
+                    "backgroundColor":"#333","background-image":"none"}
+                    );
+                event.preventDefault();
+                break;
+                case 2:
+                $("body,html").css("background-image","url('https://s1.ax1x.com/2020/06/10/tIhxaR.jpg')");
+                event.preventDefault();
+                break;
+                case 1:
+                $("body,html").css("background-image","url('https://s1.ax1x.com/2020/06/10/tI4CRK.jpg')");
+                event.preventDefault();
+                break;
+            }
+        })
+
+    </script>
+  </body>
+</html>
