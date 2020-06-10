@@ -85,7 +85,7 @@
             
             <div class="inner">
               <div id="box">
-                <img src="wxqrcode.png" height="120em" width="120em" id="wechatcode" class='none'>
+                <img src="wxqrcode.png" height="130em" width="130em" id="wechatcode" class='none'>
               </div>
               <p> 
                 <a href="javascript:void(0);" onclick="QQ()" style="text-decoration:none;"
@@ -95,9 +95,7 @@
                 onMouseOver="this.style.color= '#5ff0ff'" onMouseOut="this.style.color='#777777'"><i class="iconfont icon iconmail"></i></a>
                 &nbsp;
                 <a href="javascript:void(0);" onclick="wechat()" style="text-decoration:none;"
-                onMouseOver="this.style.color= '#1AAD19'" onMouseOut="this.style.color='#777777'"><i class="iconfont icon iconwechat" id="iconwechat"></i></a>
-
-                
+                onMouseOver="this.style.color= '#1AAD19'" onMouseOut="this.style.color='#777777'"><i class="iconfont icon iconwechat" id="iconwechat"></i></a> 
               </p>
               
                  
@@ -127,7 +125,6 @@
         iconwechat.onmouseout = function(){
           wechatcode.className = 'none';
         }
-    
 
         function QQ(){
           window.open("http://wpa.qq.com/msgrd?v=3&uin=1027389981&site=qq&menu=yes","_blank")
